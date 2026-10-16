@@ -1,0 +1,66 @@
+{
+  "kind": "evm_project",
+  "token": {
+    "contract": "LaunchToken",
+    "name": "QUORUM",
+    "symbol": "QRM",
+    "decimals": 18
+  },
+  "contracts": [
+    {
+      "contract": "QuorumSeats",
+      "constructorArgs": [
+        "$token",
+        "$owner",
+        "0x9d86f4254fcd74f664bd445764be4e6d68d44757428d9cd1f13e5459100c2162"
+      ]
+    },
+    {
+      "contract": "QuorumBoard",
+      "constructorArgs": [
+        "$contract:QuorumSeats"
+      ]
+    },
+    {
+      "contract": "QuorumAssembly",
+      "constructorArgs": [
+        "$contract:QuorumSeats",
+        "$contract:QuorumBoard"
+      ]
+    },
+    {
+      "contract": "QuorumSafePolicy",
+      "constructorArgs": [
+        "$owner",
+        "0x5d31bb1d7e4a9f3dfa3a3d421174bca73705f087",
+        "0xdda019cbd7c867a533a2a86e5c53434fdc50b13122b5a5ddb4a8df61b31c20f2",
+        "0x4e381985ca68b3e5d27b4425fa581c19cf33146d3f887a3cfca96f55528ea46f"
+      ]
+    },
+    {
+      "contract": "QuorumGovernance",
+      "constructorArgs": [
+        "$contract:QuorumSeats",
+        "$contract:QuorumBoard",
+        "$contract:QuorumAssembly",
+        "$owner",
+        "0x5d31bb1d7e4a9f3dfa3a3d421174bca73705f087",
+        "$contract:QuorumSafePolicy"
+      ]
+    },
+    {
+      "contract": "QuorumReleases",
+      "constructorArgs": [
+        "$contract:QuorumGovernance",
+        "$owner"
+      ]
+    }
+  ],
+  "pool": {
+    "pairedCurrency": "0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7",
+    "fee": 12500,
+    "tickSpacing": 60,
+    "initialPrice": "79228162514264337593543950336"
+  },
+  "notes": "QUORUM (QRM) uses six application contracts: QuorumSeats holds refundable membership stakes; QuorumBoard records discussion and hourly participation; QuorumAssembly freezes electorates and records work acceptance; QuorumSafePolicy checks the existing Safe's identity and authority configuration; QuorumGovernance manages proposals, budgets and explicit Safe handover; QuorumReleases records approved artifacts and publication observations. All owner and treasury arguments resolve through $owner to the existing launch Safe. The separate founder arguments identify the approver explicitly named in the approved workflow; they do not replace the launch owner. QuorumSeats' constitution argument is Keccak-256 of the exact docs/constitution.md bytes. QuorumSafePolicy's singleton and proxy hashes come from docs/evidence/safe-mainnet.json at Ethereum block 26203746; this recorded observation is not a fresh configuration check. Constructors require no external calls, and the manifest requests no initialization calls. The existing owner-only admission setting must bind the canonical NFT, fixed connected-seat count and admission source/hash before deposits. Deployment does not constitute founder acceptance or governance handover. The recorded Safe fallback handler must be cleared before acceptance, and the accepted code's bootstrap and handover conditions remain applicable. The factory supplies the LP, MerkleDistributor and initialization-only pool guard. The pool fee is 1.25%; initialPrice is the required manifest value, while the deployer derives the effective opening price from the launch policy and eventual token ordering. Source publication, signed artifact linkage, admission and deployment are service responsibilities. Independent review of the accepted source and this manifest remains required."
+}
