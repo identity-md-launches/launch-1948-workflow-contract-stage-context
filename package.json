@@ -1,0 +1,11 @@
+{
+  "name": "quorum-local-connector",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "test": "node --test connector/test/*.test.mjs",
+    "connector": "node connector/cli.mjs",
+    "abi": "python3 scripts/export-abi.py"
+  }
+}

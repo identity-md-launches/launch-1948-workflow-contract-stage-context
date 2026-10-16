@@ -1,0 +1,94 @@
+{
+  "compiler": "0.8.26",
+  "settings": {
+    "evm_version": "cancun",
+    "optimizer": true,
+    "optimizer_runs": 1,
+    "via_ir": true,
+    "bytecode_hash": "none"
+  },
+  "contracts": [
+    {
+      "name": "LaunchToken",
+      "source": "src/LaunchToken.sol",
+      "runtimeBytes": 1266,
+      "creationBytes": 1374,
+      "constructorTypes": [],
+      "sourceSha256": "930db31e83a603681cc3c57549d68199e6228825142fc46f80c846f0d6f73ab1"
+    },
+    {
+      "name": "QuorumSeats",
+      "source": "src/QuorumSeats.sol",
+      "runtimeBytes": 9342,
+      "creationBytes": 9679,
+      "constructorTypes": [
+        "address",
+        "address",
+        "bytes32"
+      ],
+      "sourceSha256": "0e2d6810e1772ced42195897ba52223e8bdb99a07f7e37abdca5fcd2b62440b8"
+    },
+    {
+      "name": "QuorumBoard",
+      "source": "src/QuorumBoard.sol",
+      "runtimeBytes": 10323,
+      "creationBytes": 10808,
+      "constructorTypes": [
+        "address"
+      ],
+      "sourceSha256": "e47fbdc84601993b61182108b4e16ced7279575e93cd4fea2f0571dd64c2688d"
+    },
+    {
+      "name": "QuorumAssembly",
+      "source": "src/QuorumAssembly.sol",
+      "runtimeBytes": 8879,
+      "creationBytes": 9221,
+      "constructorTypes": [
+        "address",
+        "address"
+      ],
+      "sourceSha256": "6b80d62e6ac0d9af99985ba477b3010e44c6dee7203cef77f2a1dd1675359304"
+    },
+    {
+      "name": "QuorumSafePolicy",
+      "source": "src/QuorumSafePolicy.sol",
+      "runtimeBytes": 3431,
+      "creationBytes": 3814,
+      "constructorTypes": [
+        "address",
+        "address",
+        "bytes32",
+        "bytes32"
+      ],
+      "sourceSha256": "ba1a03b4fb17aadd4cc5912e667b98fd56a7adbd2b97806f1007147f586a0bb8"
+    },
+    {
+      "name": "QuorumGovernance",
+      "source": "src/QuorumGovernance.sol",
+      "runtimeBytes": 24393,
+      "creationBytes": 25243,
+      "constructorTypes": [
+        "address",
+        "address",
+        "address",
+        "address",
+        "address",
+        "address"
+      ],
+      "sourceSha256": "7d04475b4b651e65c3fae5c1edbd1bda1093c8e5e0cc414030d367374e9c5edf"
+    },
+    {
+      "name": "QuorumReleases",
+      "source": "src/QuorumReleases.sol",
+      "runtimeBytes": 2977,
+      "creationBytes": 3282,
+      "constructorTypes": [
+        "address",
+        "address"
+      ],
+      "sourceSha256": "b71eec185a50d02b9c588a055f8d6bf7a96957aa242568a46451add4dd99eb00"
+    }
+  ],
+  "constitutionKeccak256": "0x9d86f4254fcd74f664bd445764be4e6d68d44757428d9cd1f13e5459100c2162",
+  "note": "Sizes and opcode scans concern compiled runtime templates. Deployed code hashes require actual immutable values from the deployment handoff. This is not an independent security review."
+}

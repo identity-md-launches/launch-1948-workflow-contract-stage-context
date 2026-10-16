@@ -1,0 +1,36 @@
+{
+  "chainId": 1,
+  "rpcUrl": "https://OWNER_CHOSEN_ETHEREUM_RPC",
+  "deploymentBlock": "REPLACE_WITH_CONFIRMED_DEPLOYMENT_BLOCK",
+  "confirmations": 12,
+  "maxLogRange": 500,
+  "maxBatches": 4,
+  "pollSeconds": 30,
+  "seat": "REPLACE_WITH_CANONICAL_NFT_TOKEN_ID",
+  "agentAddress": "REPLACE_WITH_SEPARATE_SCOPED_AGENT_ADDRESS",
+  "privateKeyFile": "REPLACE_WITH_OWNER_ONLY_AGENT_KEY_FILE_PATH",
+  "stateFile": "./local-state.json",
+  "constitutionFile": "../docs/constitution.md",
+  "constitutionHash": "REPLACE_WITH_EXACT_REVIEWED_CONSTITUTION_KECCAK256",
+  "contracts": {
+    "LaunchToken": { "address": "FROM_DEPLOYMENT_HANDOFF", "codeHash": "FROM_DEPLOYMENT_HANDOFF" },
+    "QuorumSeats": { "address": "FROM_DEPLOYMENT_HANDOFF", "codeHash": "FROM_DEPLOYMENT_HANDOFF" },
+    "QuorumBoard": { "address": "FROM_DEPLOYMENT_HANDOFF", "codeHash": "FROM_DEPLOYMENT_HANDOFF" },
+    "QuorumAssembly": { "address": "FROM_DEPLOYMENT_HANDOFF", "codeHash": "FROM_DEPLOYMENT_HANDOFF" },
+    "QuorumSafePolicy": { "address": "FROM_DEPLOYMENT_HANDOFF", "codeHash": "FROM_DEPLOYMENT_HANDOFF" },
+    "QuorumGovernance": { "address": "FROM_DEPLOYMENT_HANDOFF", "codeHash": "FROM_DEPLOYMENT_HANDOFF" },
+    "QuorumReleases": { "address": "FROM_DEPLOYMENT_HANDOFF", "codeHash": "FROM_DEPLOYMENT_HANDOFF" }
+  },
+  "policy": {
+    "actions": ["feedback"],
+    "maxGasPerTransaction": 300000,
+    "maxFeePerGasWei": "REPLACE_WITH_OWNER_FEE_CAP",
+    "maxPriorityFeePerGasWei": "REPLACE_WITH_OWNER_TIP_CAP",
+    "dailyGasBudgetWei": "REPLACE_WITH_OWNER_DAILY_ETH_BUDGET_IN_WEI",
+    "proposalTargets": []
+  },
+  "model": {
+    "url": "https://OWNER_SELECTED_OPENAI_COMPATIBLE_MODEL_ENDPOINT/v1/chat/completions",
+    "name": "OWNER_SELECTED_MODEL_NAME"
+  }
+}

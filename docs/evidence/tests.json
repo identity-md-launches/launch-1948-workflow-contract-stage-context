@@ -1,0 +1,28 @@
+{
+  "foundry": {
+    "compiler": "0.8.26",
+    "build": "passed",
+    "fmtCheck": "passed",
+    "testResult": "55 passed, 0 failed, 0 skipped",
+    "fuzzSeed": "0x15c225a1ee53bdf82aad206091ab5aa8a5666954fe7ae77d3e5fb80bd6c48779",
+    "fuzzRuns": 256,
+    "custodyInvariantRuns": 64,
+    "custodyInvariantDepth": 48,
+    "custodyInvariantCalls": 3072,
+    "custodyInvariantReverts": 0
+  },
+  "connector": {
+    "runtime": "Node.js 24.21.0; supports Node >=22",
+    "testResult": "16 passed, 0 failed, 0 skipped",
+    "dependencies": "vendored ethers 6.15.0; no npm install",
+    "readOnlyMainnetTransport": {
+      "chainId": 1,
+      "blockNumber": 26204125,
+      "safeVersion": "1.5.0",
+      "rpcReference": "https://eth.llamarpc.com",
+      "signedTransactions": 0
+    }
+  },
+  "artifactChecks": "7 ABI exports match build; constructor types/counts, runtime/initcode sizes, no external links, no forbidden opcodes passed",
+  "limits": "These are contributor-local checks, not an independent audit, real-model rehearsal, deployment or production handover."
+}

@@ -1,0 +1,20 @@
+{
+  "chainId": 1,
+  "blockNumber": 26203746,
+  "rpcReference": "https://eth.llamarpc.com",
+  "safe": "0xf9c003d5a247bb5282b2d6df534ed51860b14210",
+  "version": "1.5.0",
+  "owners": [
+    "0x5d31bb1d7e4a9f3dfa3a3d421174bca73705f087"
+  ],
+  "threshold": 1,
+  "modules": [],
+  "singleton": "0xff51a5898e281db6dfc7855790607438df2ca44b",
+  "singletonCodeHash": "0xdda019cbd7c867a533a2a86e5c53434fdc50b13122b5a5ddb4a8df61b31c20f2",
+  "proxyCodeHash": "0x4e381985ca68b3e5d27b4425fa581c19cf33146d3f887a3cfca96f55528ea46f",
+  "observedAtUTC": "2026-10-16",
+  "note": "Read-only observation; deployment and handover must repeat configuration checks.",
+  "transactionGuard": "0x0000000000000000000000000000000000000000",
+  "moduleGuard": "0x0000000000000000000000000000000000000000",
+  "fallbackHandler": "0x3efcbb83a4a7afcb4f68d501e2c2203a38be77f4"
+}

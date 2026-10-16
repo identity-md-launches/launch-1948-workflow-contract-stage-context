@@ -1,0 +1,23 @@
+[profile.default]
+src = "src"
+test = "test"
+out = "out"
+libs = ["vendor"]
+solc = "0.8.26"
+evm_version = "cancun"
+optimizer = true
+optimizer_runs = 1
+via_ir = true
+bytecode_hash = "none"
+remappings = ["forge-std/=vendor/forge-std/src/", "safe/=vendor/safe/contracts/"]
+
+[profile.default.fuzz]
+runs = 256
+
+[profile.default.invariant]
+runs = 64
+depth = 48
+fail_on_revert = false
+
+[fmt]
+line_length = 110
